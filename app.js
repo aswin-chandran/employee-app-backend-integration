@@ -122,13 +122,13 @@ app.delete("/api/employeelist/:id", async (req, res) => {
 
 
 
-app.put('/api/employeelist/:id', async (req,res)=>{
+app.put('/api/employeelist', async (req,res)=>{
   try{
        
-    var upId = req.params.id;
+    // var upId = req.params.id;
     var item = req.body;
        
-      await empData.findOneAndUpdate({_id:upId},item,{new:true,useFindAndModify:false});
+     const data= await empData.findOneAndUpdate({_id:item._id},item,{new:true});
        res.status(200).json('Updated Successful') 
   }catch(error){
     res.status(404).json('Error');
