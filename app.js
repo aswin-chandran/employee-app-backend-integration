@@ -36,7 +36,7 @@ mongoose
     `mongodb+srv://aswindb:${PASS}@company.ck23ks9.mongodb.net/companydb?retryWrites=true&w=majority`
   )
   .then(() => {
-    console.log("Connected to Hospital DB");
+    console.log("Connected to Employee DB");
   })
   .catch(() => {
     console.log("Error ! No connection");
